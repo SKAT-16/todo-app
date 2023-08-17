@@ -28,7 +28,7 @@ const AddTaskButton = () => {
       <img
         src={newICO}
         alt="logo"
-        className="w-fit h-8 lg:h-[30px] group-hover:mb-3 group-hover:scale-105 duration-200"
+        className="w-8 h-8 lg:h-[30px] group-hover:mb-3 group-hover:scale-105 duration-200"
       />
 
       <AddInputSection />
@@ -82,7 +82,7 @@ const EditTaskButton = () => {
       <img
         src={editICO}
         alt="logo"
-        className="w-fit h-8 lg:h-[30px] group-hover:mb-3 group-hover:scale-105 duration-200"
+        className="w-8 h-8 lg:h-[30px] group-hover:mb-3 group-hover:scale-105 duration-200"
       />
 
       <EditInputSection />
