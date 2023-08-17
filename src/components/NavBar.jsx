@@ -3,14 +3,14 @@ import editICO from "../assets/edit-nav.png";
 import newICO from "../assets/add-nav.png";
 import penICO from "../assets/pen.png";
 import searchIco from "../assets/search-btn.png";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { useState } from "react";
 import { addTodo, filterTodo, updateTodo } from "../features/todoSlice";
 
 export const NavBar = () => {
   return (
-    <div className="mt-8 w-full flex flex-col-reverse items-end md:items-start md:flex-row justify-between">
-      <div className="flex flex-col-reverse items-start md:flex-row mr-5">
+    <div className="mt-8 w-full flex items-start justify-between">
+      <div className="flex items-start">
         <AddTaskButton />
         <EditTaskButton />
       </div>
@@ -24,11 +24,11 @@ const AddTaskButton = () => {
   return (
     <div
       tabIndex={0}
-      className="bg-cyan-200 group shadow-sm rounded-md px-3 py-2 md:ml-10 cursor-pointer hover:shadow-lg duration-300 ease-in-out">
+      className="bg-cyan-400 group shadow-sm rounded-md p-2 mx-5 md:ml-10 cursor-pointer hover:shadow-lg duration-300 ease-in-out">
       <img
         src={newICO}
         alt="logo"
-        className="w-8 h-8 lg:h-[30px] group-hover:mb-3 group-hover:scale-105 duration-200"
+        className="w-8 h-8 group-hover:mb-3 group-hover:mx-auto group-hover:scale-105 duration-200"
       />
 
       <AddInputSection />
@@ -46,7 +46,7 @@ const AddInputSection = () => {
   };
 
   return (
-    <div className=" bg-cyan-200 flex-col duration-300 hidden group-hover:flex">
+    <div className="bg-transparent flex-col w-[150px] duration-300 hidden group-hover:flex">
       <input
         type="text"
         name="title"
@@ -78,11 +78,11 @@ const EditTaskButton = () => {
   return (
     <div
       tabIndex={0}
-      className="bg-cyan-200 group shadow-sm rounded-md mb-5 md:mb-0 md:ml-10 px-3 py-2 cursor-pointer hover:shadow-lg duration-300 ease-in-out">
+      className="bg-cyan-400 group shadow-sm rounded-md p-2 cursor-pointer hover:shadow-lg duration-300 ease-in-out">
       <img
         src={editICO}
         alt="logo"
-        className="w-8 h-8 lg:h-[30px] group-hover:mb-3 group-hover:scale-105 duration-200"
+        className="w-8 h-8 group-hover:mb-3 group-hover:mx-auto group-hover:scale-105 duration-200"
       />
 
       <EditInputSection />
@@ -101,7 +101,7 @@ const EditInputSection = () => {
 
   return (
     <div
-      className="bg-cyan-200 flex-col duration-300 hidden group-hover:flex">
+      className="bg-transparent flex-col w-[150px] duration-300 hidden group-hover:flex">
       <input
         type="text"
         name="title"
@@ -138,13 +138,13 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="px-3 py-1 rounded-lg bg-cyan-200 mr-5 md:mr-20 mb-5 flex items-center active:shadow-lg hover:scale-110 duration-300 ease-in-out">
+    <div className="px-3 py-1 rounded-lg bg-cyan-200 mr-5 md:mr-20 flex items-center active:shadow-lg hover:scale-110 duration-300 ease-in-out">
       <input
         type="text"
         name="s-bar"
         id=""
-        placeholder="search tasks..."
-        className="bg-transparent text-slate-600 outline-none"
+        placeholder="search"
+        className="bg-transparent text-slate-600 w-[75px] outline-none"
         onChange={handleSearch}
         value={query}
       />

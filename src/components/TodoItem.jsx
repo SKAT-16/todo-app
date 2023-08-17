@@ -14,7 +14,7 @@ export default function TodoItem({ item }) {
 
   return (
     <li
-      className="flex items-center justify-between shadow-md cursor-pointer rounded-lg w-[300px] mb-5 md:mr-5 group hover:shadow-lg hover:scale-105 active:scale-90 duration-300 ease-in-out">
+      className="flex items-center justify-between shadow-md cursor-pointer rounded-lg w-[300px] mb-5 md:mr-5 group hover:shadow-lg hover:scale-105 duration-300 ease-in-out">
       <div className="ml-3 md:my-1">
         <h4
           className={`text-green-300 text-2xl md:text-3xl mb-2 group-hover:text-white ${
@@ -23,7 +23,7 @@ export default function TodoItem({ item }) {
           {item.title}
         </h4>
         <h3
-          className={`text-green-300 leading-3 text-sm md:text-md w-36 group-hover:text-white ${
+          className={`text-green-300 leading-3 text-sm md:text-md w-40 group-hover:text-white ${
             item.completed && "line-through"
           }`}>
           {item.description}
@@ -34,21 +34,21 @@ export default function TodoItem({ item }) {
         <img
           src={applyICO}
           alt="finish-icon"
-          className="bg-green-500 rounded-xl scale-75 md:scale-[80%] px-2 py-1 mr-1 hover:scale-105 active:scale-90 duration-200 ease-in-out"
+          className="bg-green-500 rounded-xl scale-75 md:scale-[80%] px-2 py-1 mr-1 md:hover:scale-105 duration-200 ease-in-out"
           name="complete"
           onClick={handleClick}
         />
         <img
           src={deleteICO}
           alt="delete-icon"
-          className="bg-red-500 rounded-xl scale-75 md:scale-[80%] px-2 py-1 mr-1 hover:scale-105 active:scale-90 duration-200 ease-in-out"
+          className="bg-red-500 rounded-xl scale-75 md:scale-[80%] px-2 py-1 mr-1 md:hover:scale-105 duration-200 ease-in-out"
           name="delete"
           onClick={handleClick}
         />
         <img
           src={editICO}
           alt="edit-icon"
-          className="bg-blue-500 rounded-xl scale-75 md:scale-[80%] px-2 py-1 mr-1 hover:scale-105 active:scale-90 duration-200 ease-in-out"
+          className="bg-blue-500 rounded-xl scale-75 md:scale-[80%] px-2 py-1 mr-1 md:hover:scale-105 duration-200 ease-in-out"
           name="edit"
           onClick={handleClick}
         />

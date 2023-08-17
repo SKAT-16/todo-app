@@ -15,7 +15,7 @@ export default function TodoList() {
       {filteredTasks.length !== 0 ? (
         filteredTasks.map((task) => <TodoItem item={task} key={task.id} />)
       ) : (
-        <p className="text-xl text-blue-600 animate-pulse underline font-bold">
+        <p className="text-xl text-indigo-600 animate-bounce font-bold uppercase">
           {tasks.length === 0 ? `Add a new task!` : `No tasks found with the input title!`}
         </p>
       )}
